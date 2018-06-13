@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="n404-page">
     {{msg}}
   </div>
 </template>

@@ -1,7 +1,6 @@
 <template>
-  <div class="home-page">
+  <div class="com-404-box">
     {{msg}}
-    <Hello-world></Hello-world>
   </div>
 </template>
 
