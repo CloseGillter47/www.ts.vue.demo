@@ -1,5 +1,5 @@
 <template>
-  <div class="com-404-box">
+  <div class="home-page">
     {{msg}}
   </div>
 </template>

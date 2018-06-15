@@ -1,26 +1,16 @@
 import { RouteConfig as Route } from 'vue-router';
 
-const HomePage = () => import('@/views/Home');
 const NotFoundPage = () => import('@/views/com/404');
 
-const prefix = 'biz';
+const PREFIX = 'biz';
 
 const routes: Route[] = [
-    {
-        path: '/',
-        name: 'home',
-        component: HomePage,
-    },
-    {
-        path: '/404',
-        name: '404NotFound',
-        component: NotFoundPage,
-    },
+    { path: '/404', name: '404-not-found', component: NotFoundPage, meta: { title: '找不到页面' } },
 ];
 
 routes.forEach((route) => {
-    route.path = prefix ? `/${prefix}${route.path}` : route.path;
-    route.name = prefix ? `${prefix}-${route.name}` : route.name;
+    route.path = PREFIX ? `/${PREFIX}${route.path}` : route.path;
+    route.name = PREFIX ? `${PREFIX}-${route.name}` : route.name;
 });
 
 export default routes;

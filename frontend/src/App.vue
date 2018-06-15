@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -15,5 +19,5 @@
   height: 100%;
   overflow: auto;
 }
-@import '@/assets/scss/reset.scss';
+@import "@/assets/scss/reset.scss";
 </style>

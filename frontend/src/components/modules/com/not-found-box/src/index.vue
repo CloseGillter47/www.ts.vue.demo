@@ -1,6 +1,5 @@
 <template>
-  <div class="home-page">
-    biz
+  <div class="com-not-found">
     {{msg}}
   </div>
 </template>
