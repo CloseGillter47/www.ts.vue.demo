@@ -20,13 +20,12 @@ const router = new Router({
 });
 
 router.beforeEach(async (to, from, next) => {
-  if (!to.name) {
-    console.log('-------');
-    return next({ name: '404', replace: true, params: { fullPath: WEB_HREF.split('#')[0] + '#' + to.fullPath } });
-  }
-
   // 统一设置页面标题
   document.title = `${to.meta.title || '未知页面'} | ${WEB_NAME}`;
+
+  if (!to.name) {
+    return next({ name: '404', replace: true, params: { fullPath: WEB_HREF.split('#')[0] + '#' + to.fullPath } });
+  }
 
   next();
 });
