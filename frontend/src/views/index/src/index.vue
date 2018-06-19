@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    {{msg}}
+   <ku-tables ></ku-tables>
   </div>
 </template>
 

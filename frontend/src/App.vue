@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition>
+    <transition :name="transition">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -8,7 +8,12 @@
   </div>
 </template>
 
+<script lang="ts">
+export { default } from './index';
+</script>
+
 <style lang="scss">
+@import "@/assets/scss/reset.scss";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,5 +24,29 @@
   height: 100%;
   overflow: auto;
 }
-@import "@/assets/scss/reset.scss";
+.app-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}
 </style>
