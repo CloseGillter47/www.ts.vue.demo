@@ -1,12 +1,7 @@
 import { Component, Provide, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
-@Component({
-    components: {
-        HelloWorld,
-    },
-})
-export default class Home extends Vue {
+@Component
+export default class NotFoundComponent extends Vue {
     @Provide() private msg: string = 'kuroko';
     private sayHello() {
         this.msg = 'hello kuroko';
