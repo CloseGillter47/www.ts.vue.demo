@@ -1,0 +1,31 @@
+{
+  "name": "kuki-backend",
+  "version": "0.0.1",
+  "description": "koa + ts",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register index.ts",
+    "build": "ts-node --project tsconfig.json -r tsconfig-paths/register index.ts",
+    "mock": "mocha -r ts-node/register -r tsconfig-paths/register test/**/*.ts"
+  },
+  "author": "kuroko <kuroko.link@aliyun.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cli-color": "^0.3.29",
+    "@types/koa": "^2.0.46",
+    "@types/koa-joi-router": "^5.0.2",
+    "@types/koa-jwt": "^3.3.0",
+    "@types/koa-router": "^7.0.30",
+    "@types/node": "^10.5.2",
+    "ts-node": "^7.0.0",
+    "tsconfig-paths": "^3.4.2"
+  },
+  "dependencies": {
+    "cli-color": "^1.2.0",
+    "koa": "^2.5.2",
+    "koa-joi-router": "^5.1.0",
+    "koa-jwt": "^3.3.2",
+    "koa-router": "^7.4.0",
+    "typescript": "^2.9.2"
+  }
+}
