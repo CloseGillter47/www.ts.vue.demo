@@ -14,6 +14,7 @@ export { default } from './index';
 
 <style lang="scss">
 @import "@/assets/scss/reset.scss";
+@import "@/assets/scss/global.scss";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

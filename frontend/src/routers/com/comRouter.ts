@@ -1,8 +1,6 @@
 import { RouteConfig as Route } from 'vue-router';
 
 const HomePage = () => import('@/views/index');
-const NotFoundPage = () => import('@/views/com/404');
-
 
 const PREFIX = '';
 

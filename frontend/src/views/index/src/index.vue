@@ -1,6 +1,15 @@
 <template>
-  <div class="home-page">
-   <ku-tables ></ku-tables>
+  <div class="page-fixed home-page">
+    <div class="page-fixed-header">
+      <div class="home-page-guider">
+        1234
+      </div>
+    </div>
+    <div class="page-flowd-bodyer">
+      <div class="home-page-header"></div>
+      <div class="home-page-bodyer"></div>
+      <div class="home-page-footer"></div>
+    </div>
   </div>
 </template>
 
@@ -8,5 +17,5 @@
 export { default } from './view';
 </script>
 <style lang="scss">
-@import './view.scss';
+@import "./view.scss";
 </style>
